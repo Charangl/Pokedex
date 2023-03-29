@@ -1,4 +1,5 @@
-
+import PropTypes from "prop-types";
+  
   function MyPokemon({pokemon}){
     return (
         <figure>
@@ -11,5 +12,12 @@
         </figure>
       );
     }
+
+MyPokemon.propTypes = {
+  pokemon: PropTypes.shape({
+    imgSrc: PropTypes.string,
+    name: PropTypes.string.isRequired,
+  })
+}
 
   export default MyPokemon;
