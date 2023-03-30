@@ -5,7 +5,7 @@ import './App.css'
 import MyPokemon from './components/PokemonCard'
 import NavBar from './components/NavBar'
 
-
+alert("hello pokemon trainer :)")
 const pokemonList = [
   {
       name: "bulbasaur",

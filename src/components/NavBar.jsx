@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 function NavBar({pokemonIndex, setPokemonIndex, pokemonList}){
     const pokemonListLength = pokemonList.length;
     const handleClickPrev = () => {
@@ -10,6 +12,13 @@ function NavBar({pokemonIndex, setPokemonIndex, pokemonList}){
         setPokemonIndex(pokemonIndex + 1);
       }
     };
+
+    useEffect(() => {
+      if (pokemonList[pokemonIndex].name === "pikachu") {
+        alert("pika pikachu !!!");
+      }
+    });
+
     return (<div>
         <button onClick={handleClickPrev} hidden={pokemonIndex === 0}>
         {"Précédent"}
@@ -21,7 +30,11 @@ function NavBar({pokemonIndex, setPokemonIndex, pokemonList}){
         {"Suivant"}
       </button></div>
       );
+      
     }
 
-
     export default NavBar;
+
+
+
+    
